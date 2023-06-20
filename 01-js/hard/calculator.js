@@ -154,6 +154,6 @@ class Calculator {
 // Example usage:
 const calculator = new Calculator();
 
-const expression = "10 + 2 * (6 - (4 + 1) / 2) + 7";
+const expression = "10 + 2 * (6 - (4 + 1) / 2) + 7+9";
 calculator.calculate(expression);
 console.log(calculator.getResult()); // Output: 24
