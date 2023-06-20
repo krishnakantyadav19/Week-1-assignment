@@ -9,7 +9,18 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
-  return [];
+  let category = [];
+   transactions.map((value,index)=>{
+    let categoryExist = category.find((item) => item?.category == value.category);
+    if(!!categoryExist){
+      category= category.map((item,index)=>
+        item.category == value.category ? {...item, totalSpent : item.totalSpent + value.price} : item
+      )
+    }else{
+     category.push({ category: value.category, totalSpent: value.price})
+    }
+  })
+return category;
 }
 
 module.exports = calculateTotalSpentByCategory;

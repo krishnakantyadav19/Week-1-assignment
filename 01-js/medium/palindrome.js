@@ -7,7 +7,9 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  str = str.replace(/[^a-zA-Z]/g, "").toUpperCase();
+  if(str === str.split("").reverse().join("")) return true;
+  return false;
 }
 
 module.exports = isPalindrome;
